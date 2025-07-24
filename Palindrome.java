@@ -1,5 +1,17 @@
 public class Palindrome {
 
+    /* Given an integer x, return true if x is a palindrome, and false otherwise.
+     * 
+     * Input: x = 121
+     * Output: true
+     * 
+     * Input: x = -121
+     * Output: false
+     * 
+     * Input: x = 10
+     * Output: false
+     */
+
     public static boolean isPalindrome (int num){
 
         String num_str = Integer.toString(num);

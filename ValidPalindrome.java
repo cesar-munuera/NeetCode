@@ -41,8 +41,45 @@ public class ValidPalindrome {
         return newStr.toString().equals(newStr.reverse().toString());
     }
 
+
+    public static boolean isPalindrome_best(String s) {
+
+        /* Here we take 2 pointers, starting from left and right. Search for the first num or letter (from both sides).
+         * If cand find, move the pointer to the next, until find a letter or num.
+         * Left pointer must be lower than right one, always. If they are not the same, not palindrome.
+         */
+
+        int left_i = 0, right_i = s.length()-1;
+
+        while(left_i < right_i){
+
+            while(left_i < right_i && !isAlphaNum(s.charAt(left_i))){
+                left_i++;
+            }
+
+            while(left_i < right_i && !isAlphaNum(s.charAt(right_i))){
+                right_i--;
+            }
+
+            if(Character.toLowerCase(s.charAt(left_i)) != Character.toLowerCase(s.charAt(right_i))){
+                return false;
+            }
+
+            left_i++;
+            right_i--;
+        }
+
+        return true;
+    }
+
+    public static boolean isAlphaNum(char c) {
+        return (c >= 'a' && c <= 'z' ||
+                c >= 'A' && c <= 'Z' ||
+                c >= '0' && c <= '9');
+    }
+
     public static void main(String[] args) {
-        System.out.println(isPalindrome_good("A man, a plan, a canal: Panama"));
+        System.out.println(isPalindrome_best("A man, a plan, a canal: Panama"));
     }
     
 }

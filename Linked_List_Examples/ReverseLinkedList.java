@@ -44,7 +44,7 @@ public class ReverseLinkedList {
         head.next.next.next.next = new ListNode(5);
 
         ListNode reversed = reverseList(head);
-        printList(reversed);
+        System.out.println(reversed.toString());
     }
 
 }

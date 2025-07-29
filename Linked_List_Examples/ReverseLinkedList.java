@@ -21,21 +21,6 @@ public class ReverseLinkedList {
     }
 
 
-    public static void printList(ListNode head) {
-        ListNode current = head;
-
-        while (current != null) {
-            System.out.print(current.val);
-
-            if (current.next != null){
-                System.out.print(" -> ");
-            }
-            current = current.next;
-        }
-        System.out.println();
-    }
-
-
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);

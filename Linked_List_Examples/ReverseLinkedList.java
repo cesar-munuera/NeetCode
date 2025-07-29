@@ -1,4 +1,4 @@
-package Reverse_Linked_List;
+package Linked_List_Examples;
 
 public class ReverseLinkedList {
 

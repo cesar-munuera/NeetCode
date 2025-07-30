@@ -16,7 +16,6 @@ public class InvertBinaryTree {
 
         if (root == null) {
             return null;
-
         }
 
         TreeNode aux = root.right;
@@ -35,12 +34,12 @@ public class InvertBinaryTree {
                 new TreeNode(),
                 new TreeNode(2));
 
-        System.out.println("Árbol original:");
+        System.out.println("Original tree:");
         root.printTree();
 
         invertTree(root);
 
-        System.out.println("\nÁrbol invertido:");
+        System.out.println("\nInverted tree:");
         root.printTree();
     }
 }
